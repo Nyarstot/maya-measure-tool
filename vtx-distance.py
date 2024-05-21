@@ -7,7 +7,7 @@ import math
 selection = cmds.ls(sl = True)
 units = cmds.currentUnit( query=True, linear=True )
 
-if len(selection) <= 1 or len(selection) > 2:
+if len(selection) < 1 or len(selection) > 2:
     cmds.error("You must select exactly two points.")
 else:
     vtxPos = cmds.xform(selection, q = True, ws = True, t = True)
